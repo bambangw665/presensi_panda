@@ -35,11 +35,13 @@ class _BottomNavigationBarExampleState
         },
         items: [
           BottomNavigationBarItem(
-            icon: new Icon(Icons.home, color: Colors.white,),
+            icon: new Icon(Icons.home,),
+            activeIcon: new Icon(Icons.home, color: whiteColor),
             title: new Text(''),
           ),
           BottomNavigationBarItem(
             icon: new Icon(Icons.person),
+            activeIcon: new Icon(Icons.person, color: whiteColor),
             title: new Text(''),
           ),
         ],

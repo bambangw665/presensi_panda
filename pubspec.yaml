@@ -25,7 +25,8 @@ dependencies:
   flutter:
     sdk: flutter
   google_fonts: ^2.1.0
-  provider: 
+  provider: null
+  timelines: ^0.1.0
 
 dev_dependencies:
   flutter_test:

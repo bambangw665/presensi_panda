@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:presensi_panda/provider/btnbarProvider.dart';
 import 'package:presensi_panda/screen/btnbar.dart';
-import 'package:presensi_panda/screen/login_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]
+  );
   runApp(MyApp());
 }
 
