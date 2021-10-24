@@ -1,52 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:presensi_panda/screen/homePage.dart';
-import '../constant.dart';
+import 'package:presensi_panda/constant.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key key}) : super(key: key);
+import '../homePage.dart';
+
+class UbahPassword extends StatefulWidget {
+  const UbahPassword({ Key key }) : super(key: key);
 
   @override
-  _LoginScreenState createState() => _LoginScreenState();
+  _UbahPasswordState createState() => _UbahPasswordState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-
+class _UbahPasswordState extends State<UbahPassword> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: blueColor,
+      appBar: AppBar(
+        title: Text("Ubah Password"),
+        backgroundColor: blueColor,
+        shadowColor: Colors.transparent,
+      ),
       body: SafeArea(
         child: Column(
           children: [
             SizedBox(
               height: 15,
             ),
-            Expanded(
-              flex: 2,
-              child: Container(
-                width: size.width,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "LOGIN",
-                      style: GoogleFonts.poppins(
-                          color: whiteColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30),
-                    ),
-                    Text(
-                      "Masukan akun anda",
-                      style: TextStyle(fontSize: 13, color: whiteColor),
-                    )
-                  ],
-                ),
-              ),
-            ),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             Expanded(
               flex: 8,
@@ -70,7 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: size.height / 15,
                       ),
                       Text(
-                        "Username",
+                        "Password lama",
                         style: GoogleFonts.poppins(
                           color: textGreyColor,
                           fontWeight: FontWeight.bold,
@@ -84,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         decoration: InputDecoration(
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(20)),
-                          labelText: "mail.protonmail.com",
+                          // labelText: "masukan password lama",
                           fillColor: textGreyColor,
                         ),
                       ),
@@ -117,6 +100,35 @@ class _LoginScreenState extends State<LoginScreen> {
                           labelText: "***********",
                         ),
                       ),
+                       SizedBox(
+                        height: 30,
+                      ),
+                      Text(
+                        "Konfirmasi Password",
+                        style: GoogleFonts.poppins(
+                          color: textGreyColor,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      TextField(
+                        obscureText: true,
+                        enableSuggestions: false,
+                        autocorrect: false,
+                        decoration: InputDecoration(
+                          fillColor: textGreyColor,
+                          suffix: Icon(
+                            Icons.lock,
+                            color: textGreyColor,
+                          ),
+                          border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(20)),
+                          labelText: "***********",
+                        ),
+                      ),
+                      
                       SizedBox(
                         height: 30,
                       ),
@@ -128,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                           },
                           child: Text(
-                            "Login",
+                            "Konfirmasi",
                             style: GoogleFonts.poppins(
                               color: whiteColor,
                               fontWeight: FontWeight.w600,

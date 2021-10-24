@@ -24,6 +24,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_svg: ^0.19.3
   google_fonts: ^2.1.0
   provider: null
   timelines: ^0.1.0
@@ -47,6 +48,7 @@ flutter:
     - assets/png/
     # - assets/icons/
     - assets/svg/
+    - assets/svg/profile_name.svg
   #   - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

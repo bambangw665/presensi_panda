@@ -7,3 +7,4 @@ const btnBlueColor  = Color(0xFF279BD5);
 const btnRedColor  = Color(0xFFE42426);
 const textMainColor  = Color(0xFF5F6567);
 const textGreyColor  = Color(0xFF5F6567);
+const btnNavColor = Color(0xff0d6794);

@@ -26,7 +26,7 @@ class _BottomNavigationBarExampleState
     return Scaffold(
       body: currentTab[providered.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: blueColor,
+        backgroundColor: btnNavColor,
         currentIndex: providered.currentIndex,
         showSelectedLabels: false, // <-- HERE
         showUnselectedLabels: false, // <-- AND HERE

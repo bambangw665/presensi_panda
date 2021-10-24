@@ -200,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 20,
                                 ),
                                 Flexible(
                                   child: Container(
