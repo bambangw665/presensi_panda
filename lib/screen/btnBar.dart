@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:presensi_panda/constant.dart';
 import 'package:presensi_panda/provider/btnbarProvider.dart';
 import 'package:presensi_panda/screen/homePage.dart';
@@ -28,20 +29,20 @@ class _BottomNavigationBarExampleState
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: btnNavColor,
         currentIndex: providered.currentIndex,
-        showSelectedLabels: false, // <-- HERE
-        showUnselectedLabels: false, // <-- AND HERE
+        showSelectedLabels: false,
+        showUnselectedLabels: false, 
         onTap: (index) {
           providered.currentIndex = index;
         },
         items: [
           BottomNavigationBarItem(
-            icon: new Icon(Icons.home,),
-            activeIcon: new Icon(Icons.home, color: whiteColor),
+            icon: SvgPicture.asset("assets/svg/home_unactve.svg", height: 25,),
+            activeIcon: SvgPicture.asset("assets/svg/home_actve.svg",  height: 25,),
             title: new Text(''),
           ),
           BottomNavigationBarItem(
-            icon: new Icon(Icons.person),
-            activeIcon: new Icon(Icons.person, color: whiteColor),
+            icon: SvgPicture.asset("assets/svg/profile_unactive.svg", height: 25,),
+            activeIcon: SvgPicture.asset("assets/svg/profile_active.svg",  height: 25,),
             title: new Text(''),
           ),
         ],

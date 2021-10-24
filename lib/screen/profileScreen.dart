@@ -31,7 +31,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     SizedBox(
                       height: 20,
                     ),
-                    Image.asset("assets/png/picture_profile.png", height: size.height / 10,),
+                    Image.asset(
+                      "assets/png/picture_profile.png",
+                      height: size.height / 10,
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -71,7 +74,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     child: Column(
                       children: [
-                        SizedBox(height: 20,),
+                        SizedBox(
+                          height: 10,
+                        ),
                         Expanded(
                           child: Row(
                             children: [
@@ -90,6 +95,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ],
                           ),
                         ),
+                        Divider(
+                            height: 0,
+                            thickness: 2,
+                            color: Colors.grey[100],
+                            endIndent: 20
+                            ),
                         Expanded(
                           child: Row(
                             children: [
@@ -110,22 +121,43 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             ],
                           ),
                         ),
+                        Divider(
+                            height: 0,
+                            thickness: 2,
+                            color: Colors.grey[100],
+                            endIndent: 20
+                            ),
                         row_profile_details_widgets(
                           svgImg: "assets/svg/profile_password.svg",
                           nama: "Ubah Password",
                           linkTujuan: UbahPassword(),
                         ),
+                        Divider(
+                            height: 0,
+                            thickness: 2,
+                            color: Colors.grey[100],
+                            endIndent: 20
+                            ),
                         row_profile_details_widgets(
                           svgImg: "assets/svg/profile_tentangApp.svg",
                           nama: "Tentang Aplikasi",
                           linkTujuan: AboutApp(),
                         ),
+                        Divider(
+                            height: 0,
+                            thickness: 2,
+                            color: Colors.grey[100],
+                            endIndent: 20
+                            ),
                         row_profile_details_widgets(
                           svgImg: "assets/svg/profile_faq.svg",
                           nama: "FAQ",
                           linkTujuan: FaqScreen(),
                         ),
-                        SizedBox(height: 20,),
+                        
+                        SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                   ),
@@ -154,7 +186,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                   ),
                 )),
-                 SizedBox(
+            SizedBox(
               height: 20,
             ),
           ],
