@@ -1,10 +1,7 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timelines/timelines.dart';
-import '../widget/widgets.dart';
 
 import '../constant.dart';
 
@@ -37,8 +34,6 @@ class _HomePageState extends State<HomePage> {
       "16 Januari 1945",
       "17 Januari 1945",
     ];
-
-
 
     return Scaffold(
       backgroundColor: blueColor,
@@ -209,50 +204,73 @@ class _HomePageState extends State<HomePage> {
                                     child: Timeline.tileBuilder(
                                       theme: TimelineTheme.of(context).copyWith(
                                         nodePosition: 0,
-                                        indicatorTheme: TimelineTheme.of(context).indicatorTheme.copyWith(
-                                          position: 0,
-                                          size: 27
-                                        ),
+                                        indicatorTheme:
+                                            TimelineTheme.of(context)
+                                                .indicatorTheme
+                                                .copyWith(
+                                                    position: 0, size: 27),
                                       ),
                                       builder: TimelineTileBuilder.fromStyle(
                                         contentsAlign: ContentsAlign.basic,
                                         addAutomaticKeepAlives: true,
-                                        contentsBuilder: (context, index) => Padding(
-                                          padding: const EdgeInsets.only(bottom: 40, left: 20),
+                                        contentsBuilder: (context, index) =>
+                                            Padding(
+                                          padding: const EdgeInsets.only(
+                                              bottom: 40, left: 20),
                                           child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.spaceBetween,
                                             children: [
                                               Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: [
-                                                  Text(day[index], style: GoogleFonts.poppins(
-                                                    fontSize: 18,
-                                                    fontWeight: FontWeight.bold
-                                                  ),),
-                                                  Text("Absen Hadir", style: GoogleFonts.poppins(
-                                                    color: textGreyColor,
+                                                  Text(
+                                                    day[index],
+                                                    style: GoogleFonts.poppins(
+                                                        fontSize: 18,
+                                                        fontWeight:
+                                                            FontWeight.bold),
                                                   ),
+                                                  Text(
+                                                    "Absen Hadir",
+                                                    style: GoogleFonts.poppins(
+                                                      color: textGreyColor,
+                                                    ),
                                                   ),
-                                                  Text("Absen Pulang",style: GoogleFonts.poppins(
-                                                    color: textGreyColor,
-                                                  ),),
+                                                  Text(
+                                                    "Absen Pulang",
+                                                    style: GoogleFonts.poppins(
+                                                      color: textGreyColor,
+                                                    ),
+                                                  ),
                                                 ],
                                               ),
-                                               Column(
-                                                 crossAxisAlignment: CrossAxisAlignment.end,
+                                              Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
                                                 children: [
-                                                  Text(tanggal[index], style: GoogleFonts.poppins(
-                                                    fontWeight: FontWeight.w500,
-                                                  ),),
-                                                  Text("00:00", style: GoogleFonts.poppins(
-                                                    color: textGreyColor,
-                                                  ),),
-                                                  Text("00:01", style: GoogleFonts.poppins(
-                                                    color: textGreyColor,
-                                                  ),),
+                                                  Text(
+                                                    tanggal[index],
+                                                    style: GoogleFonts.poppins(
+                                                      fontWeight:
+                                                          FontWeight.w500,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "00:00",
+                                                    style: GoogleFonts.poppins(
+                                                      color: textGreyColor,
+                                                    ),
+                                                  ),
+                                                  Text(
+                                                    "00:01",
+                                                    style: GoogleFonts.poppins(
+                                                      color: textGreyColor,
+                                                    ),
+                                                  ),
                                                 ],
                                               ),
-                                              
                                             ],
                                           ),
                                         ),

@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:presensi_panda/constant.dart';
 import 'package:presensi_panda/provider/btnbarProvider.dart';
 import 'package:presensi_panda/screen/homePage.dart';
-import 'package:presensi_panda/screen/login_screen.dart';
 import 'package:presensi_panda/screen/profileScreen.dart';
 import 'package:provider/provider.dart';
 
@@ -30,19 +29,31 @@ class _BottomNavigationBarExampleState
         backgroundColor: btnNavColor,
         currentIndex: providered.currentIndex,
         showSelectedLabels: false,
-        showUnselectedLabels: false, 
+        showUnselectedLabels: false,
         onTap: (index) {
           providered.currentIndex = index;
         },
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset("assets/svg/home_unactve.svg", height: 25,),
-            activeIcon: SvgPicture.asset("assets/svg/home_actve.svg",  height: 25,),
+            icon: SvgPicture.asset(
+              "assets/svg/home_unactve.svg",
+              height: 25,
+            ),
+            activeIcon: SvgPicture.asset(
+              "assets/svg/home_actve.svg",
+              height: 25,
+            ),
             title: new Text(''),
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset("assets/svg/profile_unactive.svg", height: 25,),
-            activeIcon: SvgPicture.asset("assets/svg/profile_active.svg",  height: 25,),
+            icon: SvgPicture.asset(
+              "assets/svg/profile_unactive.svg",
+              height: 25,
+            ),
+            activeIcon: SvgPicture.asset(
+              "assets/svg/profile_active.svg",
+              height: 25,
+            ),
             title: new Text(''),
           ),
         ],
