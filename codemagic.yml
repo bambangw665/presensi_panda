@@ -1,5 +1,10 @@
 workflows:
-  hello-world:
-    name: Hello world workflow
+  my-workflow:
+    instance_type: linux
     scripts:
-        - echo "Hello World!"
+      - name: say hello
+        script: echo "Hello Codemagician!"
+
+    environment:
+      flutter: stable
+
