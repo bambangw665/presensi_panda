@@ -43,7 +43,7 @@ class _BottomNavigationBarExampleState
               "assets/svg/home_actve.svg",
               height: 25,
             ),
-            title: new Text(''),
+            // title: new Text(''),
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
@@ -54,7 +54,7 @@ class _BottomNavigationBarExampleState
               "assets/svg/profile_active.svg",
               height: 25,
             ),
-            title: new Text(''),
+            // title: new Text(''),
           ),
         ],
       ),
